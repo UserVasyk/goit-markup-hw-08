@@ -9,8 +9,8 @@ footer {
 
 .footer__list {
   @extend %list;
-  display: flex;
-  align-items: baseline;
+  // display: flex;
+  // align-items: baseline;
   & > .footer__item:nth-child(2n) {
     margin-left: 70px;
   }
@@ -22,7 +22,7 @@ footer {
 .footer__logo {
   @extend %logo;
   margin-bottom: 20px;
-  display: inline-block;
+  // display: inline-block;
 }
 .footer__logo--white {
   color: $primary-bg-color;
@@ -36,8 +36,8 @@ footer {
 }
 .footer__list-info {
   @extend %list;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   & .footer__item:not(:last-child) {
     margin-bottom: 8px;
   }
@@ -71,7 +71,7 @@ footer {
   height: 20px;
 }
 .footer__form {
-  display: flex;
+  // display: flex;
 }
 .footer__input {
   background-color: transparent;

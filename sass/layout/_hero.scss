@@ -12,6 +12,13 @@
   background-size: cover;
   margin-right: auto;
   margin-left: auto;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+
+    padding: 118px 0;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/bg-img-phone.jpg);
+  }
 }
 
 .hero-title {
@@ -22,9 +29,14 @@
   text-transform: uppercase;
 
   width: 696px;
+  @media screen and (max-width: 1199px) {
+    font-size: 26px;
+    line-height: 1.61;
+    max-width: 380px;
+    height: 84px;
+  }
   margin-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
+
   letter-spacing: 0.06em;
 }
 .hero-button {

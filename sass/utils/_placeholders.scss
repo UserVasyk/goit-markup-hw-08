@@ -15,6 +15,10 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  @media screen and (max-width: 1199px) {
+    font-size: 24px;
+    line-height: 1.16;
+  }
 }
 
 %common-button {
@@ -30,6 +34,9 @@
   margin-right: auto;
   border-radius: 4px;
   padding: 10px 32px;
+  @media screen and (max-width: 1199px) {
+    padding: 10px 24px;
+  }
   letter-spacing: 0.06em;
   transition: background-color $transition;
   &:hover,
@@ -58,9 +65,11 @@
   overflow: hidden;
 }
 %card-set {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
 }
 %common-title {
   margin-bottom: 50px;

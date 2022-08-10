@@ -15,8 +15,13 @@
   <header class="page-header">
     <div class="page-header__container container">
       <a href="/" class="page-header__logo">Web<span class="page-header__logo--black">Studio</span></a>
-      <nav>
-        <ul class="page-header__list">
+      <div class="page-header__box-burger">
+        <svg width="24" height="16" class="page-header__burger-icon">
+          <use href="./images/icon-check.svg#icon-close"></use>
+        </svg>
+      </div>
+      <nav class="page-header__nav">
+        <ul class="page-header__navigation-list">
           <li class="page-header__item">
             <a class="page-header__link page-header__link--active-blue" href="./index.html">Студия</a>
           </li>
@@ -32,7 +37,7 @@
         </ul>
 
       </nav>
-      <ul class="page-header__list">
+      <ul class="page-header__info-list">
         <li class="page-header__item">
           <a href="mailto:info@devstudio.com" class="page-header__link">
             <svg class="page-header__icon" width="16" height="12">
@@ -61,7 +66,7 @@
       </div>
     </section>
     <!-- Modal window -->
-    <div data-modal class="backdrop is-hidden">
+    <!-- <div data-modal class="backdrop is-hidden">
       <div class="modal">
         <button data-modal-close class="modal__button-close">
           <svg class="modal__icon-close">
@@ -125,7 +130,7 @@
         </form>
 
       </div>
-    </div>
+    </div> -->
 
 
     <!-- Feature -->

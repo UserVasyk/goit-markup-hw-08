@@ -3,9 +3,9 @@
 }
 .portfolio__filter-list {
   @extend %list;
-  display: flex;
+  // display: flex;
   margin-bottom: 50px;
-  justify-content: center;
+  // justify-content: center;
 }
 .portfolio__filter-item {
   &:not(:last-child) {
@@ -40,8 +40,8 @@
 }
 .portfolio__link {
   @extend %link;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   transition: box-shadow $transition;
   &:hover,
   &:focus {
@@ -58,9 +58,9 @@
   overflow: hidden;
 }
 .portfolio__container-scroll {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   background-color: #2196f3e5;
   position: absolute;
   top: 0;
