@@ -1,0 +1,93 @@
+.portfolio__title--visually-hidden {
+  @extend %visually-hidden;
+}
+.portfolio__filter-list {
+  @extend %list;
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+.portfolio__filter-item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+.portfolio__filter-button {
+  @extend %btn;
+  color: $brand-color-1;
+  background-color: $tertiary-bg-color;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  transition: color $transition, background-color $transition, box-shadow $transition;
+  &:hover,
+  &:focus {
+    color: $primary-bg-color;
+    background-color: $brand-color-2;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+.portfolio__card-list {
+  @extend %list;
+  @extend %card-set;
+  & .portfolio__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+.portfolio__link {
+  @extend %link;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow $transition;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  &:hover .portfolio__container-scroll,
+  &:focus .portfolio__container-scroll {
+    transform: translateY(0);
+  }
+}
+.portfolio__container-overflow {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio__container-scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2196f3e5;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding: 63px 24px;
+  transform: translateY(100%);
+  transition: transform $transition;
+}
+.portfolio__article-overflow {
+  color: $primary-bg-color;
+
+  font-size: 18px;
+  line-height: 1.55;
+}
+.portfolio__box {
+  border: 1px solid #eeeeee;
+  border-top: 0;
+  padding: 20px 24px;
+}
+.portfolio__title {
+  color: $brand-color-1;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 4px;
+}
+.portfolio__paragraph {
+  font-size: 16px;
+  line-height: 1.18;
+}

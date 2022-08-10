@@ -1,0 +1,94 @@
+%list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+%link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+%logo {
+  color: $brand-color-2;
+  text-decoration: none;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+%common-button {
+  color: $primary-bg-color;
+  background-color: $brand-color-2;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  min-width: 200px;
+  line-height: 1.875;
+  margin-left: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-right: auto;
+  border-radius: 4px;
+  padding: 10px 32px;
+  letter-spacing: 0.06em;
+  transition: background-color $transition;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
+%btn {
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+%card-set {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+%common-title {
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  color: $brand-color-1;
+}
+%list-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+%link-social {
+  display: block;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  align-content: center;
+  border-radius: 50%;
+  padding: 12px;
+  fill: $icons-color;
+  transition: fill $transition, background-color $transition;
+  &:hover,
+  &:focus {
+    fill: $primary-bg-color;
+    background-color: $brand-color-2;
+  }
+}

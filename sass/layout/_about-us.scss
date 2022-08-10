@@ -1,0 +1,30 @@
+.section-about__title {
+  @extend %common-title;
+}
+.section-about__list {
+  @extend %list;
+  @extend %card-set;
+  & .section-about__item {
+    width: calc((100% - 60px) / 3);
+    position: relative;
+  }
+}
+
+.section-about__box {
+  position: absolute;
+  background-color: #2f303acc;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 27px;
+}
+.section-about__paragraph {
+  color: $primary-bg-color;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+}
