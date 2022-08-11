@@ -27,15 +27,20 @@
   font-size: 44px;
   line-height: 1.36;
   text-transform: uppercase;
-
+  margin: 0 auto;
   width: 696px;
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 390px) {
     font-size: 26px;
     line-height: 1.61;
-    max-width: 380px;
+    width: auto;
+  }
+  @media screen and (min-width: 391px) and (max-width: 1199px) {
+    font-size: 26px;
+    line-height: 1.61;
+    width: 360px;
     height: 84px;
   }
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   letter-spacing: 0.06em;
 }

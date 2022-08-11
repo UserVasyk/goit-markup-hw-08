@@ -6,14 +6,22 @@
   @extend %visually-hidden;
 }
 .feature__list {
-  & .feature__item {
-    width: calc((100% - 90px) / 4);
+  @media screen and (min-width: 1200px) {
+    & .feature__item {
+      width: calc((100% - 90px) / 4);
+    }
+    & .item:last-child {
+      margin-right: 0;
+    }
   }
-  & .item:last-child {
-    margin-right: 0;
-  }
+  width: 100%;
   @extend %list;
   @extend %card-set;
+  @media screen and (max-width: 480px) {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  }
 }
 .feature__item .feature__container-icon {
   display: flex;
@@ -36,4 +44,12 @@
   text-transform: uppercase;
   color: $brand-color-1;
   margin-bottom: 10px;
+  @media screen and (max-width: 480px) {
+    text-align: center;
+  }
+}
+.feature__item {
+  @media screen and (max-width: 1199px) {
+    mab: 30px;
+  }
 }
