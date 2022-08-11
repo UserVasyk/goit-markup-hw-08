@@ -1,11 +1,14 @@
 .page-header {
+  max-height: 80px;
   padding: 0;
   font-weight: 500;
   line-height: 1.14;
   font-size: 14px;
   letter-spacing: 0.02em;
   border-bottom: 1px solid #ececec;
-  padding: 15px 0;
+  @media screen and (max-width: 767px) {
+    padding: 16px 0;
+  }
 }
 .page-header__container {
   display: flex;
@@ -44,10 +47,11 @@
   max-height: 80px;
 }
 .page-header__link {
-  // display: inline-flex;
-  // align-items: center;
+  display: inline-flex;
+  align-items: center;
 
   padding: 32px 0;
+
   transition: color $transition;
   @extend %link;
   &:hover,
@@ -74,8 +78,24 @@
   margin-left: auto;
   @extend %list;
   display: flex;
-  gap: 50px;
+  @media screen and (min-width: 1200px) {
+    gap: 50px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+    gap: 10px;
+  }
   max-height: 80px;
+  & .page-header__link {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      padding: 0;
+    }
+  }
+  & .page-header__item {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      height: 14px;
+    }
+  }
 }
 .page-header__navigation-list {
   display: flex;
@@ -85,7 +105,27 @@
   color: $brand-color-1;
 }
 .page-header__icon {
-  margin-right: 10px;
+  &--first {
+    width: 16px;
+    height: 12px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 14px;
+      height: 10px;
+    }
+  }
+  &--second {
+    width: 10px;
+    height: 16px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      height: 14px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 8px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
   fill: currentColor;
 }
 .page-header__nav,

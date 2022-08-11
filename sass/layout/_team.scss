@@ -8,8 +8,15 @@
 .section-team__list {
   @extend %list;
   @extend %card-set;
-  & .section-team__item {
-    width: calc((100% - 90px) / 4);
+  @media screen and (min-width: 768px) {
+    & .section-team__item {
+      width: calc((100% - 30px) / 2);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    & .section-team__item {
+      width: calc((100% - 90px) / 4);
+    }
   }
 }
 .section-team__box {
@@ -27,6 +34,7 @@
   font-size: 16px;
   line-height: 1.18;
   color: $brand-color-1;
+  margin-bottom: 10px;
 }
 .section-team__paragraph {
   font-size: 16px;

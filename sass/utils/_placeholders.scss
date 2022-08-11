@@ -35,7 +35,7 @@
   border-radius: 4px;
   padding: 10px 32px;
   @media screen and (max-width: 1199px) {
-    padding: 10px 24px;
+    padding: 10px 28px;
   }
   letter-spacing: 0.06em;
   transition: background-color $transition;
@@ -65,11 +65,9 @@
   overflow: hidden;
 }
 %card-set {
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 %common-title {
   margin-bottom: 50px;
@@ -78,6 +76,11 @@
   font-size: 36px;
   line-height: 1.16;
   color: $brand-color-1;
+  @media screen and (max-width: 1199px) {
+    font-size: 28px;
+    line-height: 1.17;
+    margin-bottom: 30px;
+  }
 }
 %list-social {
   display: flex;
