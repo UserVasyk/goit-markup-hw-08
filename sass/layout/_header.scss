@@ -1,5 +1,5 @@
 .page-header {
-  max-height: 80px;
+  height: 80px;
   padding: 0;
   font-weight: 500;
   line-height: 1.14;
@@ -9,6 +9,7 @@
   @media screen and (max-width: 767px) {
     padding: 16px 0;
   }
+  position: relative;
 }
 .page-header__container {
   display: flex;
@@ -16,15 +17,33 @@
 }
 .page-header__box-burger {
   margin-left: auto;
-  padding: 12px 8px;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
+.page-header__mobile-button {
+  @extend %btn;
+  display: inline-flex;
+  & .page-header__burger-menu {
+    display: none;
+  }
+  &.is-open .page-header__burger-menu {
+    display: block;
+  }
+  &.is-open .page-header__burger-close {
+    display: none;
+  }
+}
+.page-header__menu-container {
+  position: absolute;
+  display: none;
+  &.is-open {
+    display: block;
+  }
+}
 
 .page-header__logo {
-  @media screen and (min-width: 320px) {
-  }
   @media screen and (min-width: 768px) {
     margin-right: 88px;
   }
@@ -38,8 +57,10 @@
   color: #000000;
 }
 .page-header__burger-icon {
-  background-color: red;
+  height: 40px;
+  width: 40px;
 }
+
 .page-header__list {
   @extend %list;
   display: flex;
@@ -68,7 +89,7 @@
     width: 100%;
     height: 4px;
     background-color: $brand-color-2;
-    bottom: -1px;
+    bottom: 0;
     left: 0;
     border-radius: 2px;
   }
@@ -77,6 +98,7 @@
 .page-header__info-list {
   margin-left: auto;
   @extend %list;
+  max-height: 80px;
   display: flex;
   @media screen and (min-width: 1200px) {
     gap: 50px;
@@ -85,14 +107,13 @@
     flex-direction: column;
     gap: 10px;
   }
-  max-height: 80px;
-  & .page-header__link {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    & .page-header__link {
       padding: 0;
+      font-size: 12px;
+      line-height: 1.16;
     }
-  }
-  & .page-header__item {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    & .page-header__item {
       height: 14px;
     }
   }
@@ -105,6 +126,7 @@
   color: $brand-color-1;
 }
 .page-header__icon {
+  fill: currentColor;
   &--first {
     width: 16px;
     height: 12px;
@@ -126,9 +148,8 @@
   @media screen and (min-width: 1200px) {
     margin-right: 10px;
   }
-  fill: currentColor;
 }
-.page-header__nav,
+.page-header__navigation-list,
 .page-header__info-list {
   @media screen and (max-width: 767px) {
     display: none;

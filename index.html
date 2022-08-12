@@ -16,11 +16,16 @@
     <div class="page-header__container container">
       <a href="/" class="page-header__logo">Web<span class="page-header__logo--black">Studio</span></a>
       <div class="page-header__box-burger">
-        <svg width="24" height="16" class="page-header__burger-icon">
-          <use href="./images/icon-check.svg#icon-close"></use>
-        </svg>
+        <button data-menu-button class="page-header__mobile-button is-open" type="button" aria-expanded="false"
+          aria-controls="menu-container"><svg aria-label="Переключатель мобильного меню"
+            class="page-header__burger-icon">
+            <use class="page-header__burger-menu" href="./images/icons.svg#icon-menu"></use>
+            <use class="page-header__burger-close" href="./images/icons.svg#icon-close-mobile"></use>
+          </svg></button>
+        <div id="menu-container" data-menu class="page-header__menu-container">контент</div>
       </div>
       <nav class="page-header__nav">
+
         <ul class="page-header__navigation-list">
           <li class="page-header__item">
             <a class="page-header__link page-header__link--active-blue" href="./index.html">Студия</a>
@@ -425,7 +430,8 @@
     </div>
 
   </footer>
-  <script src="modal.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/mobile-menu.js"></script>
 </body>
 
 </html>

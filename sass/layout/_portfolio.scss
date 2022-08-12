@@ -4,14 +4,20 @@
 .portfolio__filter-list {
   @extend %list;
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
-}
-.portfolio__filter-item {
-  &:not(:last-child) {
-    margin-right: 8px;
+  margin-bottom: 40px;
+  gap: 8px;
+
+  row-gap: 15px;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
+
 .portfolio__filter-button {
   @extend %btn;
   color: $brand-color-1;
@@ -35,13 +41,21 @@
   @extend %list;
   @extend %card-set;
   & .portfolio__item {
-    width: calc((100% - 60px) / 3);
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 60px) / 3);
+    }
   }
 }
 .portfolio__link {
   @extend %link;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   transition: box-shadow $transition;
   &:hover,
   &:focus {
