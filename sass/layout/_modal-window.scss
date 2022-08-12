@@ -4,6 +4,7 @@
   height: 100%;
   background-color: #00000033;
   opacity: 1;
+  overflow-y: scroll;
   transition: opacity $transition, visibility $transition;
   top: 0;
   left: 0;
@@ -14,26 +15,42 @@
     visibility: hidden;
   }
   &.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: scale(1.1);
   }
+
+  // @media screen and (max-width: 1199px) {
+  justify-content: center;
+  display: flex;
+
+  padding: 93px 15px;
 }
 .modal {
-  position: absolute;
-  min-width: 528px;
-  min-height: 581px;
+  position: relative;
   background-color: $primary-bg-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  top: 50%;
-  left: 50%;
+
   z-index: 999;
-  transform: translate(-50%, -50%) scale(1);
   transition: transform $transition;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 40px;
+  @media screen and (min-width: 1200px) {
+    // position: absolute;
+    // transform: translate(-50%, -50%) scale(1);
+    // top: 50%;
+    // left: 50%;
+    min-width: 528px;
+    min-height: 581px;
+  }
+  width: 100%;
+  max-width: 450px;
+  height: 609px;
+  @media screen and (max-width: 337px) {
+    height: 639px;
+  }
 }
 .modal__button-close {
   position: absolute;
@@ -63,7 +80,11 @@
   font-size: 20px;
   line-height: 1.15;
   margin-bottom: 30px;
+  text-align: center;
   color: #212121;
+  @media screen and (max-width: 1199px) {
+    line-height: 1.5;
+  }
 }
 .form__list {
   display: flex;
@@ -109,7 +130,7 @@
 .form__label {
   position: absolute;
   color: $paragraph-color;
-  z-index: -1;
+
   top: 50%;
   transform: translateY(-50%);
   left: 42px;
@@ -166,6 +187,7 @@
   &:checked + .form__checkbox-icon {
     background-image: url(../images/icon-check.svg);
     border: 2px solid $brand-color-2;
+    background-color: $brand-color-2;
   }
   &:hover + .form__checkbox-icon,
   &:focus + .form__checkbox-icon {
@@ -173,7 +195,7 @@
   }
 }
 .form__checkbox-icon {
-  width: 16px;
+  min-width: 16px;
   height: 15px;
   border: 2px solid $brand-color-1;
   border-radius: 2px;
@@ -181,15 +203,20 @@
   background-image: url(../images/checkbox.svg);
   background-repeat: no-repeat;
   background-origin: border-box;
-  transition: background-image $transition, border $transition;
+  transition: background-image $transition, background-color $transition, border $transition;
 }
 .form__checkbox-text {
   font-size: 14px;
   line-height: 1.71;
   color: $paragraph-color;
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
 }
 .form__link-privacy {
   color: $brand-color-2;
+  height: 14px;
 }
 .form__button-submit {
   @extend %common-button;
