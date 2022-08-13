@@ -17,7 +17,7 @@
 }
 .page-header__box-burger {
   margin-left: auto;
-
+  z-index: 10;
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -25,6 +25,7 @@
 .page-header__mobile-button {
   @extend %btn;
   display: inline-flex;
+
   & .page-header__burger-menu {
     display: none;
   }
@@ -34,12 +35,32 @@
   &.is-open .page-header__burger-close {
     display: none;
   }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .page-header__menu-container {
-  position: absolute;
-  display: none;
   &.is-open {
-    display: block;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+    z-index: 5;
+    top: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+
+    height: 796px;
+    outline: 1px solid red;
+  }
+  display: flex;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    width: inherit;
   }
 }
 
@@ -149,9 +170,9 @@
     margin-right: 10px;
   }
 }
-.page-header__navigation-list,
-.page-header__info-list {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-}
+// .page-header__navigation-list,
+// .page-header__info-list {
+//   @media screen and (max-width: 767px) {
+//     display: none;
+//   }
+// }
