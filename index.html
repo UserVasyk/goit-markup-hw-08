@@ -207,7 +207,12 @@
 
         <ul class="section-about__list">
           <li class="section-about__item">
-            <img src="./images/img-1.jpg" alt="Написание программного кода" />
+            <picture>
+              <source srcset="photo.webp 1x, photo@2x.webp 2x" type="image/webp" />
+              <source srcset="photo.jpg 1x, photo@2x.jpg 2x" type="image/jpeg" />
+              <img src="./images/img-1.jpg" alt="Написание программного кода" />
+            </picture>
+
             <div class="section-about__box">
               <h3 class="section-about__paragraph">Десктопні додатки</h3>
             </div>
@@ -234,8 +239,17 @@
 
         <ul class="section-team__list">
           <li class="section-team__item">
-            <img class="section-team__photo" src="./images/img1igor.jpg" alt="Фотография Игоря Демьяненко" />
 
+
+            <picture>
+              <source srcset="./images/desktop-igor.jpg 1x, ./images/desktop-igor@2x.jpg 2x"
+                media="(min-width: 1200px)" />
+              <source srcset="./images/tablet-igor.jpg 1x, ./images/tablet-igor@2x.jpg 2x" media="(min-width: 768px)" />
+              <img src="./images/img-igor.jpg" alt="Фотография Игоря Демьяненко" />
+            </picture>
+
+            <!-- <img class="section-team__photo" srcset="./images/img-igor.jpg 1x, ./images/img-igor@2x.jpg 2x"
+              src="./images/img-igor.jpg" alt="Фотография Игоря Демьяненко" sizes="(min-width:480px) 480px, 100vw" /> -->
             <div class=" section-team__box">
               <h3 class="section-team__name">Игорь Демьяненко</h3>
               <p class="section-team__paragraph">Product Designer</p>
@@ -259,7 +273,8 @@
 
           </li>
           <li class="section-team__item">
-            <img class="section-team__photo" src="./images/img2olga.jpg" alt="Фотография Ольги Репина" />
+            <img class="section-team__photo" srcset="./images/img-olga.jpg 1x, ./images/img-olga@2x.jpg 2x"
+              src="./images/img-olga.jpg" alt="Фотография Ольги Репина" />
             <div class="section-team__box">
               <h3 class="section-team__name">Ольга Репина</h3>
               <p class="section-team__paragraph">Frontend Developer</p>
