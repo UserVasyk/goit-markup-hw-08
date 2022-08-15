@@ -46,6 +46,7 @@
     }
   }
   @media screen and (max-width: 767px) {
+    padding: 48px 0 48px 40px;
     display: none;
     z-index: 5;
     top: 0;
@@ -53,9 +54,6 @@
     left: 0;
     width: 100%;
     background-color: #fff;
-
-    height: 796px;
-    outline: 1px solid red;
   }
   display: flex;
   align-items: center;
@@ -82,12 +80,6 @@
   width: 40px;
 }
 
-.page-header__list {
-  @extend %list;
-  display: flex;
-  gap: 50px;
-  max-height: 80px;
-}
 .page-header__link {
   display: inline-flex;
   align-items: center;
@@ -104,6 +96,9 @@
   }
 }
 .page-header__link--active-blue {
+  @media screen and (max-width: 767px) {
+    color: $brand-color-2;
+  }
   @media screen and (min-width: 768px) {
     position: relative;
     color: $brand-color-2;
@@ -122,11 +117,8 @@
 
 .page-header__info-list {
   margin-left: auto;
-  @extend %list;
-  max-height: 80px;
-  display: flex;
   @media screen and (min-width: 1200px) {
-    gap: 50px;
+    gap: 30px;
   }
   @media screen and (max-width: 1199px) {
     flex-direction: column;
@@ -142,13 +134,52 @@
       height: 14px;
     }
   }
+  @media screen and (max-width: 767px) {
+    & .page-header__item:first-child {
+      font-size: 24px;
+      line-height: 1.16;
+    }
+    & .page-header__item:not(:first-child) {
+      font-size: 34px;
+      line-height: 1.17;
+    }
+    & .page-header__icon {
+      display: none;
+    }
+    margin-top: 306px;
+    margin-bottom: 64px;
+    flex-direction: column-reverse;
+  }
 }
 .page-header__navigation-list {
-  display: flex;
-  @extend %list;
-  gap: 50px;
-  max-height: 80px;
   color: $brand-color-1;
+  @media screen and (min-width: 768px) {
+    gap: 50px;
+  }
+  @media screen and (max-width: 767px) {
+    & .page-header__link {
+      font-size: 40px;
+      line-height: 1.17;
+      height: 48px;
+    }
+    flex-direction: column;
+  }
+}
+.page-header__info-list,
+.page-header__navigation-list {
+  @extend %list;
+  display: flex;
+  @media screen and (max-width: 767px) {
+    gap: 32px;
+  }
+  @media screen and (min-width: 768px) {
+    max-height: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .page-header__icon {
   fill: currentColor;
@@ -174,10 +205,36 @@
     margin-right: 10px;
   }
 }
-.page-header__navigation-list,
-.page-header__info-list {
-  @media screen and (max-width: 767px) {
-    max-width: 480px;
-    margin-left: auto;
+.page-header__social {
+  @extend %list;
+  @media screen and (min-width: 768px) {
+    display: none;
   }
+  display: flex;
+  position: relative;
+  max-width: 480px;
+  margin-left: auto;
+  flex-wrap: wrap;
+  margin-right: auto;
+  font-size: 18px;
+  line-height: 1.22;
+  gap: 10px;
+}
+.page-header__social-item {
+  &:not(:last-child) {
+    &::after {
+      content: '';
+
+      width: 22px;
+      height: 0;
+      color: gold;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      transform: rotate(90deg);
+      margin-left: 10px;
+    }
+  }
+}
+
+.page-header__social-link {
+  @extend %link;
 }
