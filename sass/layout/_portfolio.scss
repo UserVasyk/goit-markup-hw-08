@@ -79,9 +79,15 @@
   position: absolute;
   top: 0;
   height: 100%;
-  padding: 63px 24px;
   transform: translateY(100%);
   transition: transform $transition;
+  padding: 77px 24px;
+  @media screen and (min-width: 768px) {
+    padding: 49px 24px 77px 24px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
+  }
 }
 .portfolio__article-overflow {
   color: $primary-bg-color;
