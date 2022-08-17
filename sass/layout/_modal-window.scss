@@ -18,14 +18,9 @@
     transform: scale(1.1);
   }
 
-  @media screen and (max-width: 1199px) {
-    padding: 93px 15px;
-  }
-  @media screen and (min-width: 1200px) {
-    align-items: center;
-  }
   justify-content: center;
   display: flex;
+  align-items: center;
 }
 .modal {
   position: relative;

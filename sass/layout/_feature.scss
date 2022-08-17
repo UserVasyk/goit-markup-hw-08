@@ -8,9 +8,6 @@
   @extend %visually-hidden;
 }
 .feature__list {
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
-  }
   @media screen and (min-width: 768px) {
     & .feature__item {
       width: calc((100% - 30px) / 2);

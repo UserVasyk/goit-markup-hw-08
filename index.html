@@ -209,7 +209,7 @@
           <li class="section-about__item">
 
             <img src="./images/desktop-img1.jpg" srcset="./images/desktop-img1.jpg 1x, ./images/desktop-img1@2x.jpg 2x"
-              alt="Написание программного кода" />
+              sizes="370px" alt="Написание программного кода" />
 
 
             <div class="section-about__box">
@@ -218,14 +218,14 @@
           </li>
           <li class="section-about__item">
             <img src="./images/desktop-img2.jpg" srcset="./images/desktop-img2.jpg 1x, ./images/desktop-img2@2x.jpg 2x"
-              alt="Разработка мобильного дезайну" />
+              alt="Разработка мобильного дезайну" sizes="370px" />
             <div class="section-about__box">
               <h3 class="section-about__paragraph">Мобільні додатки</h3>
             </div>
           </li>
           <li class="section-about__item">
             <img src="./images/desktop-img3.jpg" srcset="./images/desktop-img3.jpg 1x, ./images/desktop-img3@2x.jpg 2x"
-              alt="Подбор дизайнерского решения" />
+              alt="Подбор дизайнерского решения" sizes="370px" />
             <div class="section-about__box">
               <h3 class="section-about__paragraph">Дизайнерські рішення</h3>
             </div>
@@ -242,11 +242,14 @@
           <li class="section-team__item">
 
             <picture>
-              <source srcset="./images/desktop-igor.jpg 1x, ./images/desktop-igor@2x.jpg 2x"
+              <source type="image/jpeg" srcset="./images/desktop-igor.jpg 1x, ./images/desktop-igor@2x.jpg 2x"
                 media="(min-width: 1200px)" />
-              <source srcset="./images/tablet-igor.jpg 1x, ./images/tablet-igor@2x.jpg 2x" media="(min-width: 768px)" />
-              <source srcset="./images/mobile-igor.jpg 1x, ./images/mobile-igor@2x.jpg 2x" media="(min-width: 320px)" />
-              <img class="section-team__photo" src="./images/desktop-igor.jpg" alt="Фотография Игоря Демьяненко" />
+              <source type="image/jpeg" srcset="./images/tablet-igor.jpg 1x, ./images/tablet-igor@2x.jpg 2x"
+                media="(min-width: 768px)" />
+              <source type="image/jpeg" srcset="./images/mobile-igor.jpg 1x, ./images/mobile-igor@2x.jpg 2x"
+                media="(max-width:767px)" />
+              <img class="section-team__photo" src="./images/desktop-igor.jpg" alt="Фотография Игоря Демьяненко"
+                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, 100vw" />
             </picture>
             <div class=" section-team__box">
               <h3 class="section-team__name">Игорь Демьяненко</h3>
@@ -272,11 +275,14 @@
           </li>
           <li class="section-team__item">
             <picture>
-              <source srcset="./images/desktop-olga.jpg 1x, ./images/desktop-olga@2x.jpg 2x"
+              <source type="image/jpeg" srcset="./images/desktop-olga.jpg 1x, ./images/desktop-olga@2x.jpg 2x"
                 media="(min-width: 1200px)" />
-              <source srcset="./images/tablet-olga.jpg 1x, ./images/tablet-olga@2x.jpg 2x" media="(min-width: 768px)" />
-              <source srcset="./images/mobile-olga.jpg 1x, ./images/mobile-olga@2x.jpg 2x" media="(min-width: 320px)" />
-              <img class="section-team__photo" src="./images/desktop-olga.jpg" alt="Фотография Ольги Репина" />
+              <source type="image/jpeg" srcset="./images/tablet-olga.jpg 1x, ./images/tablet-olga@2x.jpg 2x"
+                media="(min-width: 768px)" />
+              <source type="image/jpeg" srcset="./images/mobile-olga.jpg 1x, ./images/mobile-olga@2x.jpg 2x"
+                media="(max-width:767px)" />
+              <img class="section-team__photo" src="./images/desktop-olga.jpg" alt="Фотография Ольги Репина"
+                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, 100vw" />
             </picture>
             <div class="section-team__box">
               <h3 class="section-team__name">Ольга Репина</h3>
@@ -303,15 +309,16 @@
 
           <li class="section-team__item">
             <picture>
-              <source srcset="./images/desktop-kolya.jpg 1x, ./images/desktop-kolya@2x.jpg 2x"
+              <source type="image/jpeg" srcset="./images/desktop-kolya.jpg 1x, ./images/desktop-kolya@2x.jpg 2x"
                 media="(min-width: 1200px)" />
-              <source srcset="./images/tablet-kolya.jpg 1x, ./images/tablet-kolya@2x.jpg 2x"
+              <source type="image/jpeg" srcset="./images/tablet-kolya.jpg 1x, ./images/tablet-kolya@2x.jpg 2x"
                 media="(min-width: 768px)" />
-              <source srcset="./images/mobile-kolya.jpg 1x, ./images/mobile-kolya@2x.jpg 2x"
-                media="(min-width: 320px)" />
+              <source type="image/jpeg" srcset="./images/mobile-kolya.jpg 1x, ./images/mobile-kolya@2x.jpg 2x"
+                media="(max-width:767px)" />
 
 
-              <img class="section-team__photo" src="./images/desktop-kolya.jpg" alt="Фотография Николая Тарасова" />
+              <img class="section-team__photo" src="./images/desktop-kolya.jpg" alt="Фотография Николая Тарасова"
+                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, 100vw" />
             </picture>
             <div class="section-team__box">
               <h3 class="section-team__name">Николай Тарасов</h3>
@@ -336,15 +343,16 @@
           </li>
           <li class="section-team__item">
             <picture>
-              <source srcset="./images/desktop-misha.jpg 1x, ./images/desktop-misha@2x.jpg 2x"
+              <source type="image/jpeg" srcset="./images/desktop-misha.jpg 1x, ./images/desktop-misha@2x.jpg 2x"
                 media="(min-width: 1200px)" />
-              <source srcset="./images/tablet-misha.jpg 1x, ./images/tablet-misha@2x.jpg 2x"
+              <source type="image/jpeg" srcset="./images/tablet-misha.jpg 1x, ./images/tablet-misha@2x.jpg 2x"
                 media="(min-width: 768px)" />
-              <source srcset="./images/mobile-misha.jpg 1x, ./images/mobile-misha@2x.jpg 2x"
-                media="(min-width: 320px)" />
+              <source type="image/jpeg" srcset="./images/mobile-misha.jpg 1x, ./images/mobile-misha@2x.jpg 2x"
+                media="(max-width:767px)" />
 
 
-              <img class="section-team__photo" src="./images/desktop-misha.jpg" alt="Фотография Михаила Ермакова" />
+              <img class="section-team__photo" src="./images/desktop-misha.jpg" alt="Фотография Михаила Ермакова"
+                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, 100vw" />
             </picture>
 
 
