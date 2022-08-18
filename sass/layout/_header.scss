@@ -29,7 +29,7 @@
 .page-header__mobile-button {
   @extend %btn;
   display: inline-flex;
-
+  transition: fill $transition;
   &.is-open {
     position: fixed;
     top: 10px;
