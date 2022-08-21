@@ -68,10 +68,12 @@
     display: flex;
     height: 100vh;
     position: fixed;
+    overflow: auto;
     left: 0;
     width: 100%;
     background-color: #fff;
     transition: transform $transition;
+    gap: 64px;
   }
 
   @media screen and (min-width: 768px) {
@@ -168,7 +170,6 @@
       display: none;
     }
 
-    margin-bottom: 64px;
     flex-direction: column-reverse;
   }
 }
